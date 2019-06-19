@@ -20,7 +20,14 @@
 	<link rel="stylesheet" type="text/css" href="css/responsive.css">
 	<link rel="icon" href="images/favicon.png">
 </head>
-<body>
+<body style="overflow: hidden;">
+	<div id="loader-wrapper">
+		<div class="heartbeatloader">
+			<svg class="svgdraw" width="100%" height="100%" viewBox="0 0 150 400" xmlns="http://www.w3.org/2000/svg" >
+				<path class="path" d="M 0 200 l 40 0 l 5 -40 l 5 40 l 10 0 l 5 15 l 10 -140 l 10 220 l 5 -95 l 10 0 l 5 20 l 5 -20 l 30 0" fill="transparent" stroke-width="4" stroke="black"/>
+			</svg>
+		</div>
+	</div>
 	<header>
 		<div class="header_top">
 			<div class="custom_container">
@@ -29,8 +36,8 @@
 					<li class="dropdown">
 						<a class="dropdown-toggle text-white" href="javascript:void(0);" id="navbardrop_register" data-toggle="dropdown">Register For Free</a>
 						<div class="dropdown-menu">
-							<a class="dropdown-item" href="#">Register As Doctor</a>
-							<a class="dropdown-item" href="#">Register As Patient</a>
+							<a class="dropdown-item" href="#">Register as Doctor</a>
+							<a class="dropdown-item" href="#">Register as Patient</a>
 						</div>
 					</li>
 					<li><a class="text-white" href="#">Login</a></li>
@@ -52,28 +59,55 @@
 								<li class="nav-item">
 									<a class="nav-link active" href="index.html">Home</a>
 								</li>
-								<li class="nav-item dropdown">
+								<li class="nav-item mydropdown">
 									<a class="nav-link dropdown-toggle" data-toggle="dropdown" id="navbardrop_patient" href="javascript:void(0);">Patient</a>
 									<div class="dropdown-menu">
-										<a class="dropdown-item" href="#">Submenu 1</a>
-										<a class="dropdown-item" href="#">Submenu 2</a>
-										<a class="dropdown-item" href="#">Submenu 3</a>
+										<div class="form-row m-0">
+											<div class="col-lg-6 p-0">
+												<a class="dropdown-item" href="#">Doctor Consultation</a>
+												<a class="dropdown-item" href="#">Search Clinic</a>
+												<a class="dropdown-item" href="#">My Appointment</a>
+												<a class="dropdown-item" href="#">Family Doctor</a>
+												<a class="dropdown-item" href="#">Radiologist - Lab Booking</a>
+												<a class="dropdown-item" href="#">Pathologist - Lab Booking</a>
+												<a class="dropdown-item" href="#">Physiotherapy</a>
+												<a class="dropdown-item" href="#">Nursing</a>
+												<a class="dropdown-item" href="#">Emotional Wellbeing</a>
+											</div>
+											<div class="col-lg-6 p-0">
+												<a class="dropdown-item" href="#">Second Opinion</a>
+												<a class="dropdown-item" href="#">Follow Up Consultation</a>
+												<a class="dropdown-item" href="#">Medicine Supply</a>
+												<a class="dropdown-item" href="#">Medical Equipment Supply</a>
+												<a class="dropdown-item" href="#">New Born Baby & Mother Care at Home</a>
+												<a class="dropdown-item" href="#">Smart Ambulance</a>
+												<a class="dropdown-item" href="#">AI Based Patient Summary & Suggestions</a>
+												<a class="dropdown-item" href="#">Online Payment Mechanism</a>
+												<a class="dropdown-item" href="#">eHR at Patient</a>
+											</div>
+										</div>
 									</div>
 								</li>
 								<li class="nav-item dropdown">
 									<a class="nav-link dropdown-toggle" data-toggle="dropdown" id="navbardrop_doctor" href="javascript:void(0);">Doctor</a>
 									<div class="dropdown-menu">
-										<a class="dropdown-item" href="#">Submenu 1</a>
-										<a class="dropdown-item" href="#">Submenu 2</a>
-										<a class="dropdown-item" href="#">Submenu 3</a>
+										<a class="dropdown-item" href="#">OPD Scheduler</a>
+										<a class="dropdown-item" href="#">IPD Scheduler</a>
+										<a class="dropdown-item" href="#">Doctor Calendar</a>
+										<a class="dropdown-item" href="#">Doctor Profile</a>
+										<a class="dropdown-item" href="#">Online Consultation</a>
+										<a class="dropdown-item" href="#">Share Prescription</a>
+										<a class="dropdown-item" href="#">Syncing with Patient Calendar</a>
+										<a class="dropdown-item" href="#">Patient Conversation from OPD to IPD</a>
 									</div>
 								</li>
 								<li class="nav-item dropdown">
 									<a class="nav-link dropdown-toggle" data-toggle="dropdown" id="navbardrop_individual_OPD" href="javascript:void(0);">Individual OPD</a>
 									<div class="dropdown-menu">
-										<a class="dropdown-item" href="#">Submenu 1</a>
-										<a class="dropdown-item" href="#">Submenu 2</a>
-										<a class="dropdown-item" href="#">Submenu 3</a>
+										<a class="dropdown-item" href="#">Vitals for Walk-in , Online & Offfline Patient</a>
+										<a class="dropdown-item" href="#">Scan Prescription/Report for Non-registered Patient</a>
+										<a class="dropdown-item" href="#">Booking Slot / Doctor's Appointment</a>
+										<a class="dropdown-item" href="#">Patient Registration</a>
 									</div>
 								</li>
 								<li class="nav-item">
@@ -88,8 +122,37 @@
 				</div>
 			</div>
 		</div>
+		<div class="right_side_search">
+			<div class="side_search_content text-white">
+				<a class="search_control_btn" href="javascript:void(0);">
+					<img src="images/search.png" alt="icon search">
+				</a>
+				<div class="scroll_for_mobile">
+					<h6>Doctors Search:</h6>
+					<p>We provide the most full medical services, so every person could have the opportunity</p>
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Search by Name">
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Search by Service">
+					</div>
+					<button class="side_search_btn">Search</button>
+					<h6>Opening Hours:</h6>
+					<p>These are our normal opening hours. When we are closed can be found here.</p>
+					<div class="working_days_and_time">
+						<span class="float-left">Monday - Saturday</span>
+						<span class="float-right">8.30 – 17.00</span>
+					</div>
+					<hr>
+					<div class="working_days_and_time">
+						<span class="float-left">Sunday</span>
+						<span class="float-right">Closed</span>
+					</div>
+				</div>
+			</div>
+		</div>
 	</header>
-	<section class="page_breadcrumb">
+	<!-- <section class="page_breadcrumb">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-7">
@@ -116,7 +179,7 @@
 				<img src="images/search.png" alt="searct_icon">
 			</div>
 		</div>
-	</section>
+	</section> -->
 	<footer>
 		<div class="footer_left">
 			<div class="footer_contact_info">
@@ -134,10 +197,10 @@
 		<div class="footer_right">
 			<div class="footer_top">
 				<div class="row">
-					<div class="col-xl-8">
+					<div class="col-md-8">
 						<h6>Patient</h6>
 						<div class="row">
-							<div class="col-6">
+							<div class="col-sm-6">
 								<ul>
 									<li><a href="#">Doctor Consultation</a></li>
 									<li><a href="#">Search Clinic</a></li>
@@ -145,13 +208,13 @@
 									<li><a href="#">Family Doctor</a></li>
 									<li><a href="#">Radiologist - Lab Booking</a></li>
 									<li><a href="#">Pathologist - Lab Booking</a></li>
-									<li><a href="#">Physiotheraphy</a></li>
+									<li><a href="#">Physiotherapy</a></li>
 									<li><a href="#">Nursing</a></li>
-									<li><a href="#">Emotional Wllbeing</a></li>
-									<li><a href="#">Second Openion</a></li>
+									<li><a href="#">Emotional Wellbeing</a></li>
+									<li><a href="#">Second Opinion</a></li>
 								</ul>
 							</div>
-							<div class="col-6">
+							<div class="col-sm-6">
 								<ul>
 									<li><a href="#">Follow Up Consultation</a></li>
 									<li><a href="#">Medicine Supply</a></li>
@@ -165,17 +228,17 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-xl-4">
+					<div class="col-md-4">
 						<h6>Doctor</h6>
 						<ul>
-							<li><a href="#">OPD scheduler</a></li>
-							<li><a href="#">IPD scheduler</a></li>
+							<li><a href="#">OPD Scheduler</a></li>
+							<li><a href="#">IPD Scheduler</a></li>
 							<li><a href="#">Doctor Calendar</a></li>
 							<li><a href="#">Doctor Profile</a></li>
 							<li><a href="#">Online Consultation</a></li>
 							<li><a href="#">Share Prescription</a></li>
 							<li><a href="#">Syncing with Patient Calendar</a></li>
-							<li><a href="#">Patient conversation from OPD to IPD</a></li>
+							<li><a href="#">Patient Conversation from OPD to IPD</a></li>
 						</ul>
 					</div>
 				</div>
@@ -195,6 +258,9 @@
 				</ul>
 			</div>
 		</div>
+		<a class="back_to_top" href="javascript:void(0);">
+			<i class="fa fa-chevron-up" aria-hidden="true"></i>
+		</a>
 	</footer>
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/popper.min.js"></script>
